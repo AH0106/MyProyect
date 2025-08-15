@@ -1,0 +1,91 @@
+{
+  // ===== C / C++ =====
+  "C_Cpp.default.compilerPath": "/Library/Developer/CommandLineTools/usr/bin/clang++",
+  "C_Cpp.formatting": "clangFormat",
+  "C_Cpp.clang_format_style": "{ BasedOnStyle: LLVM, BreakBeforeBraces: Attach }",
+  "C_Cpp.suggestSnippets": false,
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  // Que tus snippets aparezcan primero
+  "editor.snippetSuggestions": "top",
+  // ===== Python =====
+  // Intérprete del proyecto (el que tiene Black/isort instalados)
+  "python.defaultInterpreterPath": "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3.11",
+  // Black + isort al guardar
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always"
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.defaultColorDecorators": "always",
+    "editor.formatOnType": true,
+    "editor.wordBasedSuggestions": "off"
+  },
+  //"python.formatting.provider": "",
+  //"python.sortImports.path": "/Library/Frameworks/Python.framework/Versions/3.11/bin/isort",
+  "python.analysis.typeCheckingMode": "basic", // usa "strict" si quieres máxima rigurosidad
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.inlayHints.callArgumentNames": "all",
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.envFile": "${workspaceFolder}/.env",
+  // ===== Java =====
+  "java.project.sourcePaths": [
+    "."
+  ],
+  "java.project.referencedLibraries": [
+    "algs4.jar"
+  ],
+  // ===== Resaltado y guías (para todos los lenguajes) =====
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.guides.indentation": true,
+  "editor.guides.highlightActiveIndentation": true,
+  "editor.selectionHighlight": true, // 🔹 Resalta todas las coincidencias del texto seleccionado
+  "editor.occurrencesHighlight": "multiFile", // 🔹 Marca todas las ocurrencias de la variable/bloque activo
+  "editor.renderLineHighlight": "all", // 🔹 Resalta línea actual y bloque activo
+
+// ===== Colores personalizados =====
+  "workbench.colorCustomizations": {
+    "editorIndentGuide.background1": "#555555", // guías inactivas
+    "editorIndentGuide.activeBackground1": "#ffcc00", // guías activas
+    "editorBracketHighlight.foreground1": "#f209f6cb",
+    "editorBracketHighlight.foreground2": "#50fa7b",
+    "editorBracketHighlight.foreground3": "#bd93f9",
+    "editorBracketHighlight.foreground4": "#ff79c6",
+    "editorBracketHighlight.foreground5": "#8be9fd",
+    "editorBracketHighlight.foreground6": "#f1fa8c",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#ff0000"
+  },
+
+  // ===== Calidad de vida / Repos limpios =====
+  "editor.formatOnSaveMode": "file",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "breadcrumbs.enabled": true,
+  "editor.stickyScroll.enabled": true,
+  // ===== Ruido fuera de búsquedas =====
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/__pycache__": true,
+    "**/.venv": true,
+    "**/venv": true,
+    "**/.mypy_cache": true,
+    "**/.pytest_cache": true
+  },
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.mypy_cache": true,
+    "**/.pytest_cache": true
+  },
+  // ===== Privacidad =====
+  "telemetry.telemetryLevel": "off",
+}
